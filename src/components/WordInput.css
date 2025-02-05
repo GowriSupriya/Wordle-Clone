@@ -1,0 +1,45 @@
+.word-input {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .input-field {
+    padding: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    width: 120px;
+    border: 2px solid #999;
+    text-align: center;
+  }
+  
+  .guess-button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    transition: background 0.3s ease-in-out;
+    border-radius:5px;
+  }
+  
+  .guess-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive */
+  @media (max-width: 500px) {
+    .input-field {
+      width: 100px;
+      font-size: 14px;
+    }
+  
+    .guess-button {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+  
+  
