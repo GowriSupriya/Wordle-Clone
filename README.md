@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+### Wordle Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple Wordle-like game built using React. The game allows the user to guess a 5-letter word within 6 attempts, providing color-coded feedback for each guess. The game is fully responsive, with a clean UI/UX, and includes a "New Game" button, game status messages, and more.
 
-## Available Scripts
+### Features
 
-In the project directory, you can run:
+### Core Features:
 
-### `npm start`
+    6 attempts to guess a 5-letter word.
+    Color-coded feedback after each guess:
+        Green: Correct letter in the correct position.
+        Yellow: Correct letter in the wrong position.
+        Gray: Incorrect letter.  
+    Valid word check: Prevents invalid words from being submitted.
+    Grid display to show previous guesses and feedback.
+    Win or Lose message after 6 attempts.
+    New Game button to restart the game.
+    
+### Optional Enhancements:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    Animations for letter feedback.
+    Dark mode toggle for user preference.
+    
+### Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    React: For building the user interface and managing state.
+    CSS: For responsive and clean styling.
+    
+### Installation
 
-### `npm test`
+    Step 1: Clone the repository
+       >> git clone https://github.com/your-username/wordle-clone.git
+       
+    Step 2: Install dependencies
+       Navigate into the project directory:
+       >> cd wordle-clone
+       Then, install the required dependencies:
+       >> npm install
+       
+    Step 3: Run the development server
+       >> npm start
+    Your app will be available at http://localhost:3000.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### How to Play
 
-### `npm run build`
+    Guess the 5-letter word within 6 attempts.
+    
+    After each guess, check the color-coded feedback:
+        Green: The letter is correct and in the right place.
+        Yellow: The letter is correct but in the wrong place.
+        Gray: The letter is incorrect.
+        
+    If you guess the word correctly, you win! If you run out of attempts, you lose.
+    Click "New Game" to start a new game at any time.
+    
+### Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    src/: Contains all the source files.
+    components/: Contains reusable components (e.g., GuessGrid, GameBoard).
+    App.js: The main component managing game logic and state.
+    index.js: The entry point of the app.
+    
+### Game Logic
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
+    Hardcoded Word List: The game uses a predefined list of 5-letter words.
+    Feedback Mechanism: After each guess, the app compares the guessed word with the target word and provides color-coded feedback (Green, Yellow, or Gray).
+    Valid Word Check: Only valid words (from the predefined list) can be submitted.
+    
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+    Vercel
+  
+    Login to Vercel and link your GitHub repository containing the project.
+    Deploy the project by following Vercel’s guided steps.
+  
+    Netlify
 
-### `npm run build` fails to minify
+    Login to Netlify and drag your build/ folder to deploy or link your GitHub repository.
+    Ensure any necessary environment variables are configured.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Code Quality and Structure
+
+    The code is structured with clean, modular components.
+    
+    State management is handled efficiently using React's useState and useEffect hooks.
+    
+    The app is designed to be fully responsive and works well on both desktop and mobile devices.
+
+
+
