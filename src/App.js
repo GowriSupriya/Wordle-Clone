@@ -10,6 +10,7 @@ const App = () => {
   const [targetWord, setTargetWord] = useState(getRandomWord());
   const [guesses, setGuesses] = useState([]);
   const [gameOver, setGameOver] = useState(false);
+  const [darkMode, setDarkMode] = useState(false); // 🔹 Dark mode state
 
   const handleGuess = (word) => {
     if (word.length !== 5 || gameOver) return;
@@ -29,8 +30,11 @@ const App = () => {
   };
 
   return (
-    <div className="container">
+    <div className={`container ${darkMode ? "dark-mode" : ""}`}> {/* 🔹 Apply dark mode class */}
       <h1>WORDLE</h1>
+      <button className="toggle-button" onClick={() => setDarkMode(!darkMode)}> {/* 🔹 Dark Mode Toggle */}
+        {darkMode ? "Light Mode" : "Dark Mode"}
+      </button>
       <Grid guesses={guesses} targetWord={targetWord} gameOver={gameOver} />
       {!gameOver && <WordInput onGuess={handleGuess} />}
       {gameOver && (
@@ -47,12 +51,3 @@ const App = () => {
 };
 
 export default App;
-
-
-
-
-
-
-
-
-
